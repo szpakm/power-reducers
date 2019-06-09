@@ -1,0 +1,14 @@
+node_modules/
+
+#build/test outputs
+/counter/
+/list/
+/set-simple/
+/task-simple/
+/toggle/
+/value/
+/.internals/
+/models.ts
+/index.js
+/coverage/
+/es2015/

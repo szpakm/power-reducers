@@ -1,0 +1,55 @@
+{
+  "name": "power-reducers",
+  "version": "1.0.1",
+  "description": "Set of helpers to create useful and commonly used reducers for redux or react hooks",
+  "main": "es2015/index.js",
+  "module": "index.js",
+  "scripts": {
+    "clean": "rimraf counter .internals list set-simple task-simple toggle value index.js models.ts coverage es2015",
+    "build:es2018": "cross-env BABEL_ENV=es2018 babel src --out-dir ./ --copy-files",
+    "build:es2015": "cross-env BABEL_ENV=es2015 babel src --out-dir ./es2015 --copy-files",
+    "test": "cross-env BABEL_ENV=test jest",
+    "test:coverage": "npm test -- --coverage",
+    "test:watch": "npm test -- --watch",
+    "build": "npm run clean && npm run build:es2018 && npm run build:es2015",
+    "prepare": "npm run clean && npm run build"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szpakm/power-reducers.git"
+  },
+  "keywords": [
+    "redux",
+    "reducer",
+    "store",
+    "state",
+    "useReducer",
+    "react",
+    "react hooks",
+    "boilerplate",
+    "template",
+    "typesctipt"
+  ],
+  "author": "szpakm <szpak@pm.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/szpakm/power-reducers/issues"
+  },
+  "homepage": "https://github.com/szpakm/power-reducers#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "babel-preset-minify": "^0.5.0",
+    "cross-env": "^5.2.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.17.1",
+    "rimraf": "^2.6.3",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.1"
+  }
+}

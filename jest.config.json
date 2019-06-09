@@ -1,0 +1,7 @@
+{
+  "name": "power-reducers",
+  "jest": {
+    "verbose": true,
+    "testRegex": "(/test/.*\\.spec.js)$"
+  }
+}

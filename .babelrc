@@ -1,0 +1,29 @@
+{
+  "env": {
+    "es2018": {
+      "plugins": [
+        "@babel/plugin-syntax-object-rest-spread"
+      ],
+      "presets": [
+        "minify"
+      ]
+    },
+    "es2015": {
+      "presets": [
+        "@babel/env",
+        "minify"
+      ]
+    },
+    "test": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "modules": "commonjs"
+          }
+        ],
+        "minify"
+      ]
+    }
+  }
+}
