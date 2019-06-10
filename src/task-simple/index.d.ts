@@ -1,6 +1,10 @@
 declare module "power-reducers/task-simple";
 
-import { Reducer, CreateReducerOption, CreateReduerOptionCustom } from "../models";
+import {
+  Reducer,
+  CreateReducerOption,
+  CreateReduerOptionCustom
+} from "../models";
 
 export interface TaskSimpleState {
   isPending: boolean;
@@ -18,7 +22,13 @@ export interface TaskSimpleCreateReducerOptions {
 
 export function createReducer(
   opt: TaskSimpleCreateReducerOptions
-): [Reducer<TaskSimpleState>, TaskSimpleStateGenerator];
+): [
+  Reducer<TaskSimpleState>,
+  {
+    generateState: TaskSimpleStateGenerator;
+    getInitialState(): TaskSimpleState;
+  }
+];
 
 /* create selector */
 

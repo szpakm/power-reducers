@@ -19,6 +19,7 @@ export interface CounterCreateReducerOptions {
   decrementByOn?: CreateReducerOption;
   setOn?: CreateReducerOption;
   resetOn?: CreateReducerOption;
+  emptyOn?: CreateReducerOption;
   _customHandlers?: CreateReduerOptionCustom<CounterState>;
 }
 
@@ -26,4 +27,10 @@ export type CounterStateGenerator = (data?: CounterState) => CounterState;
 
 export function createReducer(
   opt?: CounterCreateReducerOptions
-): [Reducer<CounterState>, CounterStateGenerator];
+): [
+  Reducer<CounterState>,
+  {
+    generateState: CounterStateGenerator;
+    getInitialState(): CounterState;
+  }
+];

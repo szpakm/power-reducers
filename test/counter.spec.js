@@ -68,13 +68,22 @@ describe("counter", () => {
     expect(reducer(10, { type: "setValue", payload: 20 })).toEqual(20);
   });
 
-  it('resets value to 0 (not initial) on "resetOn" action', () => {
+  it('resets value to initial on "resetOn" action', () => {
     const [reducer] = createReducer({
       initial: 7,
       resetOn: { type: "reset" }
     });
 
-    expect(reducer(10, { type: "reset" })).toEqual(0);
+    expect(reducer(10, { type: "reset" })).toEqual(7);
+  });
+
+  it('resets value to 0 (not initial) on "emptyOn" action', () => {
+    const [reducer] = createReducer({
+      initial: 7,
+      emptyOn: { type: "empty" }
+    });
+
+    expect(reducer(10, { type: "empty" })).toEqual(0);
   });
 
   it('doubles value on "_customHanlder"', () => {

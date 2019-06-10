@@ -29,7 +29,13 @@ export type ListStateGenerator<T> = (data?: T[]) => ListState<T>;
 
 export function createReducer<T>(
   opt?: ListCreateReducerOptions<T>
-): [Reducer<ListState<T>>, ListStateGenerator<T>];
+): [
+  Reducer<ListState<T>>,
+  {
+    generateState: ListStateGenerator<T>;
+    getInitialState(): ListState<T>;
+  }
+];
 
 /* create selector */
 

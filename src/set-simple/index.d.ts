@@ -15,6 +15,7 @@ export interface SetSimpleCreateReducerOptions<T> {
   setOn?: CreateReducerOption;
   addOn?: CreateReducerOption;
   removeOn?: CreateReducerOption;
+  resetOn?: CreateReducerOption;
   emptyOn?: CreateReducerOption;
   _customHandlers?: CreateReduerOptionCustom<SetSimpleState<T>>;
 }
@@ -23,4 +24,10 @@ export type SetSimpleStateGenerator<T> = (data?: T[]) => SetSimpleState<T>;
 
 export function createReducer<T>(
   opt?: SetSimpleCreateReducerOptions<T>
-): [Reducer<SetSimpleState<T>>, SetSimpleStateGenerator<T>];
+): [
+  Reducer<SetSimpleState<T>>,
+  {
+    generateState: SetSimpleStateGenerator<T>;
+    getInitialState(): SetSimpleState<T>;
+  }
+];

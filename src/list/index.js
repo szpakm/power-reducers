@@ -30,8 +30,9 @@ export const createReducer = ({
     byId: addToById({}, data),
     ids: addToIds([], data)
   });
+  const getInitialState = () => generateState();
 
-  const defaultState = generateState(initial);
+  const initialState = getInitialState();
   const emptyState = generateState([]);
   const actionHandler = Object.create(null);
   const registerActionHandler = createRegisterActionHandler.bind(actionHandler);
@@ -108,8 +109,8 @@ export const createReducer = ({
       registerActionHandler(opt.type, state => {
         return {
           ...state,
-          byId: defaultState.byId,
-          ids: defaultState.ids
+          byId: initialState.byId,
+          ids: initialState.ids
         };
       });
     });
@@ -120,13 +121,13 @@ export const createReducer = ({
     });
   }
 
-  const reducer = function listReducer(state = defaultState, action) {
+  const reducer = function listReducer(state = initialState, action) {
     return actionHandler[action.type]
       ? actionHandler[action.type](state, action)
       : state;
   };
 
-  return [reducer, generateState];
+  return [reducer, { generateState, getInitialState }];
 };
 
 /* selectors */

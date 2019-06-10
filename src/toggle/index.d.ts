@@ -1,6 +1,10 @@
 declare module "power-reducers/toggle";
 
-import { Reducer, CreateReducerOption, CreateReduerOptionCustom } from "../models";
+import {
+  Reducer,
+  CreateReducerOption,
+  CreateReduerOptionCustom
+} from "../models";
 
 export type ToggleState = boolean;
 
@@ -13,11 +17,14 @@ export interface ToggleOptions {
   makeFalseOn?: CreateReducerOption;
   setOn?: CreateReducerOption;
   resetOn?: CreateReducerOption;
-  _customHandlers?: CreateReduerOptionCustom<ToggleState>
+  _customHandlers?: CreateReduerOptionCustom<ToggleState>;
 }
 
 export type ToggleStateGenerator = (data?: ToggleState) => ToggleState;
 
 export function createReducer(
   opt?: ToggleOptions
-): [Reducer<ToggleState>, ToggleStateGenerator];
+): [
+  Reducer<ToggleState>,
+  { generateState: ToggleStateGenerator; getInitialState(): ToggleState }
+];

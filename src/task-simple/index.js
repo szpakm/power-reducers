@@ -18,8 +18,10 @@ export const createReducer = ({
     isPending: data,
     error: ""
   });
+  const getInitialState = () => generateState();
 
-  const defaultState = generateState(initial);
+  const defaultState = generateState(false);
+  const initialState = getInitialState();
   const actionHandler = Object.create(null);
   const registerActionHandler = createRegisterActionHandler.bind(actionHandler);
 
@@ -39,7 +41,7 @@ export const createReducer = ({
       registerActionHandler([opt.type], state => {
         return {
           ...state,
-          isPending: false,
+          isPending: defaultState.isPending,
           error: defaultState.error
         };
       });
@@ -57,7 +59,7 @@ export const createReducer = ({
 
         return {
           ...state,
-          isPending: false,
+          isPending: defaultState.isPending,
           error
         };
       });
@@ -69,13 +71,13 @@ export const createReducer = ({
     });
   }
 
-  const reducer = function taskSimpleReducer(state = defaultState, action) {
+  const reducer = function taskSimpleReducer(state = initialState, action) {
     return actionHandler[action.type]
       ? actionHandler[action.type](state, action)
       : state;
   };
 
-  return [reducer, generateState];
+  return [reducer, { generateState, getInitialState }];
 };
 
 export const selectIsPending = (state = {}) => state.isPending;

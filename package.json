@@ -1,6 +1,6 @@
 {
   "name": "power-reducers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Set of helpers to create useful and commonly used reducers for redux or react hooks",
   "main": "es2015/index.js",
   "module": "index.js",

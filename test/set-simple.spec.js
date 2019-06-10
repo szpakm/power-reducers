@@ -50,13 +50,22 @@ describe("set-simple", () => {
     );
   });
 
-  it("makes empty", () => {
+  it("makes empty on emptyOn", () => {
     const [reducer] = createReducer({
       emptyOn: { type: "empty" },
       initial: ["any"]
     });
 
     expect(reducer(["any", "x"], { type: "empty" })).toEqual([]);
+  });
+
+  it("makes initial on resetOn", () => {
+    const [reducer] = createReducer({
+      resetOn: { type: "reset" },
+      initial: ["any"]
+    });
+
+    expect(reducer(["any", "x"], { type: "reset" })).toEqual(["any"]);
   });
 
   it('doubles every values on "_customHanlder"', () => {

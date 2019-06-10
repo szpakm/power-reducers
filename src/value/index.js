@@ -13,7 +13,8 @@ export const createReducer = ({
   _customHandlers
 } = {}) => {
   const generateState = (data = initial) => data;
-  const defaultState = generateState(initial);
+  const getInitialState = () => generateState();
+  const initialState = getInitialState();
   const actionHandler = Object.create(null);
   const registerActionHandler = createRegisterActionHandler.bind(actionHandler);
 
@@ -27,7 +28,7 @@ export const createReducer = ({
   }
   if (resetOn) {
     readCreateReducerParameter(resetOn).forEach(opt => {
-      registerActionHandler(opt.type, () => defaultState);
+      registerActionHandler(opt.type, () => initialState);
     });
   }
   if (_customHandlers) {
@@ -36,11 +37,11 @@ export const createReducer = ({
     });
   }
 
-  const reducer = function valueReducer(state = defaultState, action) {
+  const reducer = function valueReducer(state = initialState, action) {
     return actionHandler[action.type]
       ? actionHandler[action.type](state, action)
       : state;
   };
 
-  return [reducer, generateState];
+  return [reducer, { generateState, getInitialState }];
 };
