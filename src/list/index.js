@@ -19,6 +19,7 @@ export const createReducer = ({
   updateOn,
   removeOn,
   emptyOn,
+  resetOn,
   _customHandlers
 } = {}) => {
   const addToById = createAddById(idName);
@@ -98,6 +99,17 @@ export const createReducer = ({
           ...state,
           byId: emptyState.byId,
           ids: emptyState.ids
+        };
+      });
+    });
+  }
+  if (resetOn) {
+    readCreateReducerParameter(resetOn).forEach(opt => {
+      registerActionHandler(opt.type, state => {
+        return {
+          ...state,
+          byId: defaultState.byId,
+          ids: defaultState.ids
         };
       });
     });

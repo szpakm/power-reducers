@@ -231,6 +231,28 @@ describe("list", () => {
       ).toEqual(emptyState);
     });
 
+    it("makes initial on resetOn", () => {
+      const [reducer] = createReducer({
+        initial: [{ uuid: 'a', name: 'A' }],
+        resetOn: { type: "resetOn" }
+      });
+
+      expect(
+        reducer(
+          {
+            byId: { id0: { uuid: "id0", name: "name1" } },
+            ids: ["id0"]
+          },
+          { type: "resetOn" }
+        )
+      ).toEqual({
+        byId: {
+          a: { uuid: 'a', name: 'A'}
+        },
+        ids: ['a']
+      });
+    });
+
     it('add item "_customHanlder"', () => {
       const itemToAdd = { uuid: "x", name: "Mateusz" };
       const [reducer] = createReducer({

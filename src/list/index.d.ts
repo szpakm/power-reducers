@@ -21,6 +21,7 @@ export interface ListCreateReducerOptions<T> {
   removeOn?: CreateReducerOption;
   updateOn?: CreateReducerOption;
   emptyOn?: CreateReducerOption;
+  resetOn?: CreateReducerOption;
   _customHandlers?: CreateReduerOptionCustom<ListState<T>>;
 }
 
