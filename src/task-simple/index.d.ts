@@ -14,6 +14,7 @@ export interface TaskSimpleState {
 export type TaskSimpleStateGenerator = (data?: boolean) => TaskSimpleState;
 
 export interface TaskSimpleCreateReducerOptions {
+  initial?: boolean;
   startOn?: CreateReducerOption;
   successOn?: CreateReducerOption;
   errorOn?: CreateReducerOption;
