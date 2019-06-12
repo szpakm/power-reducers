@@ -18,11 +18,11 @@ import { combineReducers } from "redux";
 import { createReducer } from "power-reducers/counter";
 
 const [counter] = createReducer({
-  initial: 0,
-  setOn: "SET",
+  initial: 10,
   incrementOn: "INCREMENT",
   incrementByOn: "INCREMENT_BY",
-  decrementOn: "DECREMENT"
+  decrementOn: "DECREMENT",
+  setOn: { type: "SET", payload: 'count' }
 });
 
 export default combineReducers({
@@ -34,11 +34,12 @@ export default combineReducers({
 And dispatch your actions
 
 ```js
-dispatch({ type: "SET", payload: 10 }); // counter: 10
+// initial state - counter: 10
 dispatch({ type: "INCREMENT" }); // counter: 11
 dispatch({ type: "INCREMENT_BY", payload: 5 }); // counter: 16
 dispatch({ type: "INCREMENT_BY", payload: 20 }); // counter: 36
 dispatch({ type: "DECREMENT" }); // counter: 35
+dispatch({ type: "SET", count: 10 }); // counter: 10
 ```
 
 See more [counter API and examples](docs/counter.md)
@@ -71,6 +72,14 @@ export default combineReducers({
 And dispatch your actions
 
 ```js
+/*
+  // initial state:
+  products: {
+    byId: {},
+    allIds: []
+  }
+*/
+
 dispatch({
   type: "SET_PRODUCTS",
   payload: [
