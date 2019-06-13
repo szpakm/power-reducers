@@ -79,8 +79,6 @@ default: `false`
 
 Type: `HandlerOption`[_1_]
 
-Required: No
-
 Handled action(s) example:
 
 ```js
@@ -102,8 +100,6 @@ Reducer logic:
 
 Type: `HandlerOption`[_1_]
 
-Required: No
-
 Handled action(s) example:
 
 ```js
@@ -124,8 +120,6 @@ Reducer logic:
 > What action(s) will trigger error
 
 Type: `HandlerOption`[_1_]
-
-Required: No
 
 Handled action(s) example:
 
@@ -196,7 +190,7 @@ ___
 
 **[_1_]** type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
-| Parameter xample                                      | Valid action example                                |
+| Parameter example                                      | Valid action example                                |
 | ----------------------------------------------------- | --------------------------------------------------- |
 | `"ADD_ITEMS"`                                         | `{ type: "ADD_ITEMS", payload: /* some data */ }`   |
 | `{ type: "ADD_ITEMS" }`                               | `{ type: "ADD_ITEMS", payload: /* some data */ }`   |

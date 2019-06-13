@@ -58,7 +58,7 @@ export const Counter: React.SFC<{}> = () => {
       <button onClick={() => dispatch({ type: "INCREMENT" })}>+ 1</button>
       <button onClick={() => dispatch({ type: "DECREMENT" })}>- 1</button>
       <button onClick={() => dispatch({ type: "DOUBLE" })}>x 2</button>
-      <button onClick={() => dispatch({ type: "INCREMENT", delta: 10 })}>+ 10</button>
+      <button onClick={() => dispatch({ type: "INCREMENT_BY", delta: 10 })}>+ 10</button>
     </>
   );
 }
@@ -90,7 +90,7 @@ default: `0`
 
 > What action(s) will +1
 
-Type: `HandlerOption`[_1_]
+Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -108,7 +108,7 @@ Reducer logic:
 
 > What action(s) will -1
 
-Type: `HandlerOption`[_1_]
+Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -126,7 +126,7 @@ Reducer logic:
 
 > What action(s) will increment by provided value
 
-Type: `HandlerOption`[_1_]
+Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -144,7 +144,7 @@ Reducer logic:
 
 > What action(s) will decrement by provided value
 
-Type: `HandlerOption`[_1_]
+Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -162,7 +162,7 @@ Reducer logic:
 
 > What action(s) will set value
 
-Type: `HandlerOption`[_1_]
+Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -180,7 +180,7 @@ Reducer logic:
 
 > What action(s) will set value that was set as initial
 
-Type: `HandlerOption`[_1_]
+Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -198,7 +198,7 @@ Reducer logic:
 
 > What action(s) will set value to 0 (zero)
 
-Type: `HandlerOption`[_1_]
+Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -225,7 +225,7 @@ createReducer({
     {
       type: "DOUBLE_COUNT",
       handler: (state, action) => {
-        // executet when action.type === "DOUBLE_COUNT"
+        // executed when action.type === "DOUBLE_COUNT"
         return state * 2;
       }
     }
@@ -237,7 +237,7 @@ createReducer({
 
 **[_1_]** type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
-| Parameter xample                                        | Valid action example                                  |
+| Parameter example                                        | Valid action example                                  |
 | ------------------------------------------------------- | ----------------------------------------------------- |
 | `"SET_VALUE"`                                           | `{ type: "SET_VALUE", payload: /* some data */ }`     |
 | `{ type: "SET_VALUE" }`                                 | `{ type: "SET_VALUE", payload: /* some data */ }`     |
