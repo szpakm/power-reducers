@@ -67,7 +67,7 @@ export default combineReducers({
 
 #### PARAMETERS
 
-### **`initial`**
+#### **`initial`**
 
 > Initial/default value for state's `isPending` field.
 
@@ -75,7 +75,7 @@ type: `boolean`
 
 default: `false`
 
-### **`startOn`**
+#### **`startOn`**
 
 > What action(s) will trigger start of the task
 
@@ -98,7 +98,7 @@ Reducer logic:
 });
 ```
 
-### **`successOn`**
+#### **`successOn`**
 
 > What action(s) will trigger completion of the task (without errors)
 
