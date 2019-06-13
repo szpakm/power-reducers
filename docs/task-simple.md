@@ -189,22 +189,29 @@ createReducer({
 ## selectIsPending
 ```javascript
 import { selectIsPending } from 'power-reducers/task-simple';
-```
-> selectIsPending(taskSimpleState) => boolean;
 
+/* ... */
+
+const isPending = selectIsPending(taskSimpleState); // boolean
+```
 
 ## selectIsError
 ```javascript
 import { selectIsError } from 'power-reducers/task-simple';
+
+/* ... */
+
+const isError = selectIsError(taskSimpleState); // boolean
 ```
-> selectIsError(taskSimpleState) => boolean;
 
 ## selectIsSuccess
 ```javascript
 import { selectIsSuccess } from 'power-reducers/task-simple';
-```
-> selectIsSuccess(taskSimpleState) => boolean;
 
+/* ... */
+
+const isSuccess = selectIsSuccess(taskSimpleState); // boolean
+```
 
 ___
 
