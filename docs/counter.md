@@ -1,7 +1,5 @@
 ## power-reducers
 
----
-
 - counter
 - [toggle](./toggle.md)
 - [value](./value.md)
@@ -209,7 +207,7 @@ Handled action(s) example:
 Reducer logic:
 
 ```js
-(state, action) => 0; // or any other value that was set as initial
+(state, action) => 0; // allways 0
 ```
 
 #### **`_customHandlers`**
@@ -241,5 +239,5 @@ createReducer({
 | ------------------------------------------------------- | ----------------------------------------------------- |
 | `"SET_VALUE"`                                           | `{ type: "SET_VALUE", payload: /* some data */ }`     |
 | `{ type: "SET_VALUE" }`                                 | `{ type: "SET_VALUE", payload: /* some data */ }`     |
-| `{ type: "INCREMENT_BY", payload: "ids" }`              | `{ type: "INCREMENT_BY", ids: /* some data */ }`      |
+| `{ type: "INCREMENT_BY", payload: "diff" }`              | `{ type: "INCREMENT_BY", diff: /* some data */ }`      |
 | `{ type: "INCREMENT_BY", payload: (action) => someData` | `{ type: "INCREMENT_BY", /* data to be resolved */ }` |
