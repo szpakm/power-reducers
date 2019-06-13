@@ -28,8 +28,6 @@ interface TaskSimpleState {
 
 ## createReducer
 
-`createReducer(parameters?): [reducer, { generateState, getInitialState }]`;
-
 #### USAGE (example with redux)
 
 ```js
