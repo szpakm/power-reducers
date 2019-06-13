@@ -2,12 +2,12 @@
 
 ---
 
-- [counter](docs/counter.md)
-- [toggle](docs/toggle.md)
-- [value](docs/value.md)
+- [counter](./counter.md)
+- [toggle](./toggle.md)
+- [value](./value.md)
 - set-simple
-- [task-simple](docs/task-simple.md)
-- [list](docs/list.md)
+- [task-simple](./task-simple.md)
+- [list](./list.md)
 
 ---
 
