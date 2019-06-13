@@ -30,7 +30,7 @@ interface TaskSimpleState {
 
 `createReducer(parameters?): [reducer, { generateState, getInitialState }]`;
 
-### USAGE (example with redux)
+#### USAGE (example with redux)
 
 ```js
 // reducers.js

@@ -134,7 +134,7 @@ You can handle more actions, like _removing_, _updating_, _clearing_ as well as 
 
 By default **`power-reducers`** is written in ECMAScript 2018 language standard and it is recommended that you transpile it inside your project by your own (using ex. [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)).
 
-If you need older EcmaScript version, then import it from `es2015` directory:
+If you need older EcmaScript version (ex. when errors during webpack build), then import it from `es2015` directory:
 
 ```js
 // import transpiled EcmaScript 2015 version
