@@ -120,27 +120,8 @@ Reducer logic:
   error: ""
 });
 ```
-> selectIsPending(taskSimpleState) => boolean;
 
-
-## selectIsError
-```javascript
-import { selectIsError } from 'power-reducers/task-simple';
-```
-> selectIsError(taskSimpleState) => boolean;
-
-## selectIsSuccess
-```javascript
-import { selectIsSuccess } from 'power-reducers/task-simple';
-```
-> selectIsSuccess(taskSimpleState) => boolean;
-
-
-___
-
-**[_1_]** type HandlerOption - single item **or Array** containing the following types (can be mixed):
-
-### **`errorOn`**
+#### **`errorOn`**
 
 > What action(s) will trigger error
 
@@ -166,7 +147,7 @@ reducer logic:
 });
 ```
 
-### **`_customHandlers`**
+#### **`_customHandlers`**
 
 > Create own reducers for different action(s) types (try to avoid this).
 
