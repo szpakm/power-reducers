@@ -17,29 +17,39 @@ Define your reducer
 import { combineReducers } from "redux";
 import { createReducer } from "power-reducers/counter";
 
-const [counter] = createReducer({
-  initial: 10,
-  incrementOn: "INCREMENT",
-  incrementByOn: "INCREMENT_BY",
-  decrementOn: "DECREMENT",
-  setOn: { type: "SET", payload: 'count' }
+const [pendingRequests] = createReducer({
+  initial: 0,
+  incrementOn: [
+    "FETCHING_USERS",
+    "FETCHING_SETTINGS",
+    "FETCHING_PRODUCTS"
+  ],
+  decrementOn: [
+    "FETCHING_USERS_SUCCESS",
+    "FETCHING_SETTINGS_SUCCESS",
+    "FETCHING_PRODUCTS_SUCCESS",
+    "FETCHING_USERS_ERROR",
+    "FETCHING_SETTINGS_ERROR",
+    "FETCHING_PRODUCTS_ERROR"
+  ],
+  resetOn: "CANCEL_ALL_REQUESTS"
 });
 
 export default combineReducers({
   // ...
-  counter
+  pendingRequests
 });
 ```
 
 And dispatch your actions
 
 ```js
-// initial state - counter: 10
-dispatch({ type: "INCREMENT" }); // counter: 11
-dispatch({ type: "INCREMENT_BY", payload: 5 }); // counter: 16
-dispatch({ type: "INCREMENT_BY", payload: 20 }); // counter: 36
-dispatch({ type: "DECREMENT" }); // counter: 35
-dispatch({ type: "SET", count: 10 }); // counter: 10
+// initial state - counter: 0
+dispatch({ type: "FETCHING_USERS" }); // counter: 1
+dispatch({ type: "FETCHING_PRODUCTS" }); // counter: 2
+dispatch({ type: "FETCHING_USERS_SUCCESS" }); // counter: 1
+dispatch({ type: "CANCEL_ALL_REQUEST" }); // counter: 0
+// ...
 ```
 
 See more [counter API and examples](docs/counter.md)
@@ -83,8 +93,8 @@ And dispatch your actions
 dispatch({
   type: "SET_PRODUCTS",
   payload: [
-    { uuid: 'p1', name: "product 1" },
-    { uuid: 'p2', name: "product 2" }
+    { uuid: "p1", name: "product 1" },
+    { uuid: "p2", name: "product 2" }
   ]
 });
 /*
@@ -99,7 +109,7 @@ dispatch({
 
 dispatch({
   type: "ADD_PRODUCT",
-  payload: { uuid: 'p3', name: "product 3" }
+  payload: { uuid: "p3", name: "product 3" }
 });
 /*
   products: {
