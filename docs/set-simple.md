@@ -72,9 +72,8 @@ default: `[]`
 
 > What action(s) will set state content
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "SET_LANGS", payload: ["js", "ts", "css"] }
 ```
 
@@ -82,9 +81,8 @@ Handled action(s) example:
 
 > What action(s) will add items to the set
 
-Handled action(s) example:
-
 ```js
+// action examples:
 { type: "ADD_LANGS", payload: ["js", "ts", "css"] }, // multi
 { type: "ADD_LANG", payload: "c++"] } // single
 ```
@@ -93,9 +91,8 @@ Handled action(s) example:
 
 > What action(s) will remove (filter out) items from the set
 
-Handled action(s) example:
-
 ```js
+// action examples:
 { type: "REMOVE_LANGS", payload: ["js", "ts", "css"] }, // multi
 { type: "REMOVE_LANG", payload: "c++"] } // single
 ```
@@ -104,9 +101,8 @@ Handled action(s) example:
 
 > What action(s) will reset sate to the initial
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "SET_DEFAULT_LANGS", ... }
 ```
 
@@ -114,9 +110,8 @@ Handled action(s) example:
 
 > What action(s) will make set empty
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "CLEAR_LANGS", ... }
 ```
 

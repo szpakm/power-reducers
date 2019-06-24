@@ -70,9 +70,8 @@ default: `''` (empty string)
 
 > What action(s) will setting value
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "SET_TOKEN", payload: 'token' }
 ```
 
@@ -80,9 +79,8 @@ Handled action(s) example:
 
 > What action(s) will set value that was set as initial
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: 'RESET_TOKEN', ... }
 ```
 

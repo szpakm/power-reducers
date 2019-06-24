@@ -79,9 +79,8 @@ default: `false`
 
 > What action(s) will trigger start of the task
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "FETCHING_STARTED", ... }
 ```
 
@@ -89,9 +88,8 @@ Handled action(s) example:
 
 > What action(s) will trigger completion of the task (without errors)
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: 'FETCHING_SUCCESS', ... }
 ```
 
@@ -99,9 +97,8 @@ Handled action(s) example:
 
 > What action(s) will trigger error
 
-Handled action(s) example:
-
 ```js
+// action example:
 {
   type: "FETCHING_ERROR",
   message: "Permission denied" // "message" is not default payload path

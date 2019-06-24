@@ -104,9 +104,8 @@ default: `0`
 
 > What action(s) will +1
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "INCREMENT", ... }
 ```
 
@@ -114,9 +113,8 @@ Handled action(s) example:
 
 > What action(s) will -1
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "DECREMENT", ... }
 ```
 
@@ -124,9 +122,8 @@ Handled action(s) example:
 
 > What action(s) will increment by provided value
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "INCREMENT_BY", payload: 5 }
 ```
 
@@ -134,9 +131,8 @@ Handled action(s) example:
 
 > What action(s) will decrement by provided value
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "DECREMENT_BY", payload: 5 }
 ```
 
@@ -144,9 +140,8 @@ Handled action(s) example:
 
 > What action(s) will set value
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "SET_COUNTER", payload: 5 }
 ```
 
@@ -154,9 +149,8 @@ Handled action(s) example:
 
 > What action(s) will set value that was set as initial
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "RESET_COUNTER", ... }
 ```
 
@@ -164,9 +158,8 @@ Handled action(s) example:
 
 > What action(s) will set value to 0 (zero)
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "SET_ZERO", ... }
 ```
 

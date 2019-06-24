@@ -74,9 +74,8 @@ default: `false`
 
 > What action(s) toggles the state (true/false)
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "TOGGLE_FULLSCREEN", ... }
 ```
 
@@ -84,9 +83,8 @@ Handled action(s) example:
 
 > What action(s) will make state `true`
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: 'SHOW_MODAL', ... }
 ```
 
@@ -94,9 +92,8 @@ Handled action(s) example:
 
 > What action(s) will make state `false`
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "HIDE_MODAL", ... }
 ```
 
@@ -104,9 +101,8 @@ Handled action(s) example:
 
 > What action(s) will manually set state
 
-Handled action(s) example:
-
 ```js
+// action example:
 {
   type: "SET_MODAL_VISIBILITY",
   payload: false // "payload" is default data field name
@@ -117,9 +113,8 @@ Handled action(s) example:
 
 > What action(s) will reset value to initially set.
 
-Handled action(s) example:
-
 ```js
+// action example:
 { type: "RESET_VISIBILITY", ... }
 ```
 
