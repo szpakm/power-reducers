@@ -70,11 +70,9 @@ type: `boolean`
 
 default: `false`
 
-#### **`toggleOn`**
+#### **`toggleOn`**<sup>1</sup>
 
 > What action(s) toggles the state (true/false)
-
-Type: `HandlerOption`[_1_]
 
 Handled action(s) example:
 
@@ -82,17 +80,9 @@ Handled action(s) example:
 { type: "TOGGLE_FULLSCREEN", ... }
 ```
 
-Reducer logic:
-
-```js
-(state, action) => !state;
-```
-
-#### **`makeTrueOn`**
+#### **`makeTrueOn`**<sup>1</sup>
 
 > What action(s) will make state `true`
-
-Type: `HandlerOption`[_1_]
 
 Handled action(s) example:
 
@@ -100,17 +90,9 @@ Handled action(s) example:
 { type: 'SHOW_MODAL', ... }
 ```
 
-Reducer logic:
-
-```js
-(state, action) => true;
-```
-
-#### **`makeFalseOn`**
+#### **`makeFalseOn`**<sup>1</sup>
 
 > What action(s) will make state `false`
-
-Type: `HandlerOption`[_1_]
 
 Handled action(s) example:
 
@@ -118,17 +100,9 @@ Handled action(s) example:
 { type: "HIDE_MODAL", ... }
 ```
 
-reducer logic:
-
-```js
-(state, action) => false;
-```
-
-#### **`setOn`**
+#### **`setOn`**<sup>1</sup>
 
 > What action(s) will manually set state
-
-Type: `HandlerOption`[_1_]
 
 Handled action(s) example:
 
@@ -139,28 +113,14 @@ Handled action(s) example:
 }
 ```
 
-reducer logic:
-
-```js
-(state, action) => newState; // must be boolean
-```
-
-#### **`resetOn`**
+#### **`resetOn`**<sup>1</sup>
 
 > What action(s) will reset value to initially set.
-
-Type: `HandlerOption`[_1_]
 
 Handled action(s) example:
 
 ```js
 { type: "RESET_VISIBILITY", ... }
-```
-
-reducer logic:
-
-```js
-(state, action) => initialValue; // set in "initial" parameter
 ```
 
 #### **`_customHandlers`**
@@ -185,7 +145,7 @@ createReducer({
 
 ---
 
-**[_1_]** type HandlerOption - single item **or Array** containing the following types (can be mixed):
+**<sup>1</sup>** type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
 | Parameter example                                    | Valid action example                               |
 | ---------------------------------------------------- | -------------------------------------------------- |

@@ -66,11 +66,9 @@ type: `any`
 
 default: `''` (empty string)
 
-#### **`setOn`**
+#### **`setOn`**<sup>1</sup>
 
 > What action(s) will setting value
-
-Type: `HandlerOption`[_1_]
 
 Handled action(s) example:
 
@@ -78,28 +76,14 @@ Handled action(s) example:
 { type: "SET_TOKEN", payload: 'token' }
 ```
 
-Reducer logic:
-
-```js
-(state, action) => action.token; // "token" is not default payload path
-```
-
-#### **`resetOn`**
+#### **`resetOn`**<sup>1</sup>
 
 > What action(s) will set value that was set as initial
-
-Type: `HandlerOption`[_1_]
 
 Handled action(s) example:
 
 ```js
 { type: 'RESET_TOKEN', ... }
-```
-
-Reducer logic:
-
-```js
-(state, action) => initialValue; // default ""
 ```
 
 #### **`_customHandlers`**
@@ -124,7 +108,7 @@ createReducer({
 
 ---
 
-**[_1_]** type HandlerOption - single item **or Array** containing the following types (can be mixed):
+**<sup>1</sup>** type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
 | Parameter example                                    | Valid action example                               |
 | ---------------------------------------------------- | -------------------------------------------------- |

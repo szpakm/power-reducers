@@ -75,11 +75,9 @@ type: `boolean`
 
 default: `false`
 
-#### **`startOn`**
+#### **`startOn`**<sup>1</sup>
 
 > What action(s) will trigger start of the task
-
-Type: `HandlerOption`[_1_]
 
 Handled action(s) example:
 
@@ -87,20 +85,9 @@ Handled action(s) example:
 { type: "FETCHING_STARTED", ... }
 ```
 
-Reducer logic:
-
-```js
-(state, action) => ({
-  isPending: true,
-  error: ""
-});
-```
-
-#### **`successOn`**
+#### **`successOn`**<sup>1</sup>
 
 > What action(s) will trigger completion of the task (without errors)
-
-Type: `HandlerOption`[_1_]
 
 Handled action(s) example:
 
@@ -108,20 +95,9 @@ Handled action(s) example:
 { type: 'FETCHING_SUCCESS', ... }
 ```
 
-Reducer logic:
-
-```js
-(state, action) => ({
-  isPending: false,
-  error: ""
-});
-```
-
-#### **`errorOn`**
+#### **`errorOn`**<sup>1</sup>
 
 > What action(s) will trigger error
-
-Type: `HandlerOption`[_1_]
 
 Handled action(s) example:
 
@@ -130,15 +106,6 @@ Handled action(s) example:
   type: "FETCHING_ERROR",
   message: "Permission denied" // "message" is not default payload path
 }
-```
-
-reducer logic:
-
-```js
-(state, action) => ({
-  isPending: false,
-  error: ""
-});
 ```
 
 #### **`_customHandlers`**
@@ -190,7 +157,7 @@ const isSuccess = selectIsSuccess(taskSimpleState); // boolean
 
 ___
 
-**[_1_]** type HandlerOption - single item **or Array** containing the following types (can be mixed):
+**<sup>1</sup>** type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
 | Parameter example                                      | Valid action example                                |
 | ----------------------------------------------------- | --------------------------------------------------- |

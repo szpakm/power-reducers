@@ -50,13 +50,29 @@ export const Counter: React.SFC<{}> = () => {
     getInitialState() // required for hook
   );
 
+  function applyIncrement() {
+    dispatch({ type: "INCREMENT" });
+  }
+
+  function applyDecrement() {
+    dispatch({ type: "DECREMENT" });
+  }
+
+  function applyIncrementBy10() {
+    dispatch({ type: "INCREMENT_BY", payload: 10 });
+  }
+
+  function applyDouble() {
+    dispatch({ type: "DOUBLE" });
+  }
+
   return (
     <>
       <p>Count: {state}</p>
-      <button onClick={() => dispatch({ type: "INCREMENT" })}>+ 1</button>
-      <button onClick={() => dispatch({ type: "DECREMENT" })}>- 1</button>
-      <button onClick={() => dispatch({ type: "DOUBLE" })}>x 2</button>
-      <button onClick={() => dispatch({ type: "INCREMENT_BY", delta: 10 })}>+ 10</button>
+      <button onClick={applyIncrement}>+ 1</button>
+      <button onClick={applyDecrement}>- 1</button>
+      <button onClick={applyDouble}>x 2</button>
+      <button onClick={applyIncrementBy10}>+ 10</button>
     </>
   );
 }
@@ -84,11 +100,9 @@ type: `number`
 
 default: `0`
 
-#### **`incrementOn`**
+#### **`incrementOn`**<sup>1</sup>
 
 > What action(s) will +1
-
-Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -96,17 +110,9 @@ Handled action(s) example:
 { type: "INCREMENT", ... }
 ```
 
-Reducer logic:
-
-```js
-(state, action) => state + 1;
-```
-
-#### **`decrementOn`**
+#### **`decrementOn`**<sup>1</sup>
 
 > What action(s) will -1
-
-Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -114,17 +120,9 @@ Handled action(s) example:
 { type: "DECREMENT", ... }
 ```
 
-Reducer logic:
-
-```js
-(state, action) => state - 1;
-```
-
-#### **`incrementByOn`**
+#### **`incrementByOn`**<sup>1</sup>
 
 > What action(s) will increment by provided value
-
-Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -132,17 +130,9 @@ Handled action(s) example:
 { type: "INCREMENT_BY", payload: 5 }
 ```
 
-Reducer logic:
-
-```js
-(state, action) => state + action.payload;
-```
-
-#### **`decrementByOn`**
+#### **`decrementByOn`**<sup>1</sup>
 
 > What action(s) will decrement by provided value
-
-Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -150,17 +140,9 @@ Handled action(s) example:
 { type: "DECREMENT_BY", payload: 5 }
 ```
 
-Reducer logic:
-
-```js
-(state, action) => state - action.payload;
-```
-
-#### **`setOn`**
+#### **`setOn`**<sup>1</sup>
 
 > What action(s) will set value
-
-Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -168,17 +150,9 @@ Handled action(s) example:
 { type: "SET_COUNTER", payload: 5 }
 ```
 
-Reducer logic:
-
-```js
-(state, action) => action.payload;
-```
-
-#### **`resetOn`**
+#### **`resetOn`**<sup>1</sup>
 
 > What action(s) will set value that was set as initial
-
-Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
@@ -186,28 +160,14 @@ Handled action(s) example:
 { type: "RESET_COUNTER", ... }
 ```
 
-Reducer logic:
-
-```js
-(state, action) => 5; // or any other value that was set as initial
-```
-
-#### **`emptyOn`**
+#### **`emptyOn`**<sup>1</sup>
 
 > What action(s) will set value to 0 (zero)
-
-Type: HandlerOption[_1_]
 
 Handled action(s) example:
 
 ```js
 { type: "SET_ZERO", ... }
-```
-
-Reducer logic:
-
-```js
-(state, action) => 0; // allways 0
 ```
 
 #### **`_customHandlers`**
@@ -233,7 +193,7 @@ createReducer({
 
 ---
 
-**[_1_]** type HandlerOption - single item **or Array** containing the following types (can be mixed):
+**<sup>1</sup>** type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
 | Parameter example                                        | Valid action example                                  |
 | ------------------------------------------------------- | ----------------------------------------------------- |
