@@ -108,7 +108,7 @@ createReducer({
 
 ---
 
-<sup>1</sup>**** type HandlerOption - single item **or Array** containing the following types (can be mixed):
+<sup>1</sup> type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
 | Parameter example                                    | Valid action example                               |
 | ---------------------------------------------------- | -------------------------------------------------- |
