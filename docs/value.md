@@ -66,7 +66,7 @@ type: `any`
 
 default: `''` (empty string)
 
-#### **`setOn`**<sup>1</sup>
+#### **`setOn`<sup>1</sup>**
 
 > What action(s) will setting value
 
@@ -76,7 +76,7 @@ Handled action(s) example:
 { type: "SET_TOKEN", payload: 'token' }
 ```
 
-#### **`resetOn`**<sup>1</sup>
+#### **`resetOn`<sup>1</sup>**
 
 > What action(s) will set value that was set as initial
 
@@ -108,7 +108,7 @@ createReducer({
 
 ---
 
-**<sup>1</sup>** type HandlerOption - single item **or Array** containing the following types (can be mixed):
+<sup>1</sup>**** type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
 | Parameter example                                    | Valid action example                               |
 | ---------------------------------------------------- | -------------------------------------------------- |

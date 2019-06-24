@@ -68,7 +68,7 @@ type: `Array<T>`
 
 default: `[]`
 
-#### **`setOn`**<sup>1</sup>
+#### **`setOn`<sup>1</sup>**
 
 > What action(s) will set state content
 
@@ -78,7 +78,7 @@ Handled action(s) example:
 { type: "SET_LANGS", payload: ["js", "ts", "css"] }
 ```
 
-#### **`addOn`**<sup>1</sup>
+#### **`addOn`<sup>1</sup>**
 
 > What action(s) will add items to the set
 
@@ -89,7 +89,7 @@ Handled action(s) example:
 { type: "ADD_LANG", payload: "c++"] } // single
 ```
 
-#### **`removeOn`**<sup>1</sup>
+#### **`removeOn`<sup>1</sup>**
 
 > What action(s) will remove (filter out) items from the set
 
@@ -100,7 +100,7 @@ Handled action(s) example:
 { type: "REMOVE_LANG", payload: "c++"] } // single
 ```
 
-#### **`resetOn`**<sup>1</sup>
+#### **`resetOn`<sup>1</sup>**
 
 > What action(s) will reset sate to the initial
 
@@ -110,7 +110,7 @@ Handled action(s) example:
 { type: "SET_DEFAULT_LANGS", ... }
 ```
 
-#### **`emptyOn`**<sup>1</sup>
+#### **`emptyOn`<sup>1</sup>**
 
 > What action(s) will make set empty
 
@@ -142,7 +142,7 @@ createReducer({
 
 ---
 
-**<sup>1</sup>** type HandlerOption - single item **or Array** containing the following types (can be mixed):
+<sup>1</sup>**** type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
 | Parameter example                                       | Valid action example                                  |
 | ------------------------------------------------------- | ----------------------------------------------------- |

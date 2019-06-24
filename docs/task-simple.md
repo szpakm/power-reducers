@@ -75,7 +75,7 @@ type: `boolean`
 
 default: `false`
 
-#### **`startOn`**<sup>1</sup>
+#### **`startOn`<sup>1</sup>**
 
 > What action(s) will trigger start of the task
 
@@ -85,7 +85,7 @@ Handled action(s) example:
 { type: "FETCHING_STARTED", ... }
 ```
 
-#### **`successOn`**<sup>1</sup>
+#### **`successOn`<sup>1</sup>**
 
 > What action(s) will trigger completion of the task (without errors)
 
@@ -95,7 +95,7 @@ Handled action(s) example:
 { type: 'FETCHING_SUCCESS', ... }
 ```
 
-#### **`errorOn`**<sup>1</sup>
+#### **`errorOn`<sup>1</sup>**
 
 > What action(s) will trigger error
 
@@ -157,7 +157,7 @@ const isSuccess = selectIsSuccess(taskSimpleState); // boolean
 
 ___
 
-**<sup>1</sup>** type HandlerOption - single item **or Array** containing the following types (can be mixed):
+<sup>1</sup>**** type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
 | Parameter example                                      | Valid action example                                |
 | ----------------------------------------------------- | --------------------------------------------------- |

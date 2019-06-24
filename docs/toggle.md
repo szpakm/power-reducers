@@ -70,7 +70,7 @@ type: `boolean`
 
 default: `false`
 
-#### **`toggleOn`**<sup>1</sup>
+#### **`toggleOn`<sup>1</sup>**
 
 > What action(s) toggles the state (true/false)
 
@@ -80,7 +80,7 @@ Handled action(s) example:
 { type: "TOGGLE_FULLSCREEN", ... }
 ```
 
-#### **`makeTrueOn`**<sup>1</sup>
+#### **`makeTrueOn`<sup>1</sup>**
 
 > What action(s) will make state `true`
 
@@ -90,7 +90,7 @@ Handled action(s) example:
 { type: 'SHOW_MODAL', ... }
 ```
 
-#### **`makeFalseOn`**<sup>1</sup>
+#### **`makeFalseOn`<sup>1</sup>**
 
 > What action(s) will make state `false`
 
@@ -100,7 +100,7 @@ Handled action(s) example:
 { type: "HIDE_MODAL", ... }
 ```
 
-#### **`setOn`**<sup>1</sup>
+#### **`setOn`<sup>1</sup>**
 
 > What action(s) will manually set state
 
@@ -113,7 +113,7 @@ Handled action(s) example:
 }
 ```
 
-#### **`resetOn`**<sup>1</sup>
+#### **`resetOn`<sup>1</sup>**
 
 > What action(s) will reset value to initially set.
 
@@ -145,7 +145,7 @@ createReducer({
 
 ---
 
-**<sup>1</sup>** type HandlerOption - single item **or Array** containing the following types (can be mixed):
+<sup>1</sup>**** type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
 | Parameter example                                    | Valid action example                               |
 | ---------------------------------------------------- | -------------------------------------------------- |

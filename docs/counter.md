@@ -100,7 +100,7 @@ type: `number`
 
 default: `0`
 
-#### **`incrementOn`**<sup>1</sup>
+#### **`incrementOn`<sup>1</sup>**
 
 > What action(s) will +1
 
@@ -110,7 +110,7 @@ Handled action(s) example:
 { type: "INCREMENT", ... }
 ```
 
-#### **`decrementOn`**<sup>1</sup>
+#### **`decrementOn`<sup>1</sup>**
 
 > What action(s) will -1
 
@@ -120,7 +120,7 @@ Handled action(s) example:
 { type: "DECREMENT", ... }
 ```
 
-#### **`incrementByOn`**<sup>1</sup>
+#### **`incrementByOn`<sup>1</sup>**
 
 > What action(s) will increment by provided value
 
@@ -130,7 +130,7 @@ Handled action(s) example:
 { type: "INCREMENT_BY", payload: 5 }
 ```
 
-#### **`decrementByOn`**<sup>1</sup>
+#### **`decrementByOn`<sup>1</sup>**
 
 > What action(s) will decrement by provided value
 
@@ -140,7 +140,7 @@ Handled action(s) example:
 { type: "DECREMENT_BY", payload: 5 }
 ```
 
-#### **`setOn`**<sup>1</sup>
+#### **`setOn`<sup>1</sup>**
 
 > What action(s) will set value
 
@@ -150,7 +150,7 @@ Handled action(s) example:
 { type: "SET_COUNTER", payload: 5 }
 ```
 
-#### **`resetOn`**<sup>1</sup>
+#### **`resetOn`<sup>1</sup>**
 
 > What action(s) will set value that was set as initial
 
@@ -160,7 +160,7 @@ Handled action(s) example:
 { type: "RESET_COUNTER", ... }
 ```
 
-#### **`emptyOn`**<sup>1</sup>
+#### **`emptyOn`<sup>1</sup>**
 
 > What action(s) will set value to 0 (zero)
 
@@ -193,7 +193,7 @@ createReducer({
 
 ---
 
-**<sup>1</sup>** type HandlerOption - single item **or Array** containing the following types (can be mixed):
+<sup>1</sup>**** type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
 | Parameter example                                        | Valid action example                                  |
 | ------------------------------------------------------- | ----------------------------------------------------- |
