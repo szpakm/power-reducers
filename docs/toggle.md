@@ -18,7 +18,7 @@ type ToggleState = boolean;
 ```
 
 ```js
-// toggle example state
+// toggle state example
 false; // :)
 ```
 

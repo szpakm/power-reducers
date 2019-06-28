@@ -18,7 +18,7 @@ type CounterState = number;
 ```
 
 ```js
-// counter example state
+// counter state example
 5; // :-)
 ```
 
@@ -50,29 +50,29 @@ export const Counter: React.SFC<{}> = () => {
     getInitialState() // required for hook
   );
 
-  function applyIncrement() {
+  function doIncrement() {
     dispatch({ type: "INCREMENT" });
   }
 
-  function applyDecrement() {
+  function doDecrement() {
     dispatch({ type: "DECREMENT" });
   }
 
-  function applyIncrementBy10() {
+  function doIncrementBy10() {
     dispatch({ type: "INCREMENT_BY", payload: 10 });
   }
 
-  function applyDouble() {
+  function doDouble() {
     dispatch({ type: "DOUBLE" });
   }
 
   return (
     <>
       <p>Count: {state}</p>
-      <button onClick={applyIncrement}>+ 1</button>
-      <button onClick={applyDecrement}>- 1</button>
-      <button onClick={applyDouble}>x 2</button>
-      <button onClick={applyIncrementBy10}>+ 10</button>
+      <button onClick={doIncrement}>+ 1</button>
+      <button onClick={doDecrement}>- 1</button>
+      <button onClick={doDouble}>x 2</button>
+      <button onClick={doIncrementBy10}>+ 10</button>
     </>
   );
 }

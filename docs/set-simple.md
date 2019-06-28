@@ -18,7 +18,7 @@ type SetSimpleState<T> = T[];
 ```
 
 ```js
-// set-simple example state
+// set-simple state example
 [1, "a", 2, true, "Batman"]; // only "simple" vaules
 ```
 

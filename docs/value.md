@@ -18,7 +18,7 @@ type ValueType = any; // prefer serializable types
 ```
 
 ```js
-// value example state
+// value state example
 "Batman";
 ```
 

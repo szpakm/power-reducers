@@ -21,7 +21,7 @@ interface TaskSimpleState {
 ```
 
 ```js
-// task-simple example state
+// task-simple state example
 {
   isPending: false,
   error: 'Permission denied'
@@ -152,7 +152,7 @@ import { selectIsSuccess } from 'power-reducers/task-simple';
 const isSuccess = selectIsSuccess(taskSimpleState); // boolean
 ```
 
-___
+---
 
 <sup>1</sup> type HandlerOption - single item **or Array** containing the following types (can be mixed):
 
